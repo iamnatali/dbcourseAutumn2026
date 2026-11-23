@@ -76,3 +76,11 @@ POST /bookings/reserve -> "bookingId"
    "eventId": string_uuid,
    "ticketIds": string[],
  }
+
+## Для запуска проекта нужно:
+
+0. Скопировать себе проект локально и запустить postgresql
+1. В makefile поменять DATABASE на путь к вашей локальной БД 
+3. В корне проекта выполнить make dbu
+4. cd cmd/api
+5. go run main.go -db-dsn=postgres://postgesuser:postgrespassword@localhost/databasename
